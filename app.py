@@ -1,13 +1,17 @@
+import flask
 from flask import Flask
 import pymongo
 
+db = pymongo.MongoClient().flaskdemo
+
 app = Flask(__name__)
+app.debug = True
 
 @app.route("/")
-def hello():
+def display_news():
+    articles = db.articles.find()
 
-  
-    return render_template('hello.html', articles = articles)
+    return flask.render_template('main.html', articles = articles)
 
 @app.route("/new_post", methods=['POST'])
 def new_post():

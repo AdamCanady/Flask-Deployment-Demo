@@ -9,6 +9,6 @@ db.articles.insert({
 });
 
 db.articles.insert({
-  "title": "",
+  "title": "DevX is awesome!",
   "content": "<p>At Carleton, the folks are wonderful and they have a great time coming to <a href=\"http://devx.io\">DevX</a>!</p>"
 });
