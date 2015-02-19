@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <title>News! - DevX Demo</title>
+</head>
+<body>
+    <div id="content">
+        <h1>Here's all your news!</h1>
+        {% for item in articles %}
+            <h2>{{ item.title|safe }}</h2>
+            {{ item.content|safe }}
+        {% endfor %}
+    </div>
+    <form action="/new_post" method="post">
+        <h1>Submit a story!</h1>
+        <br>Title: <input type="text" name="title">
+        <br>Story: <textarea name="body"></textarea>
+        <br><input type="submit" value="Submit">
+    </form>
+</body>

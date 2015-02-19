@@ -1,7 +1,8 @@
-use flaskdemo;
+conn = new Mongo();
+db = conn.getDB("flaskdemo");
 db.dropDatabase();
 
-use flaskdemo;
+db = conn.getDB("flaskdemo");
 
 db.articles.insert({
   "title": "Carleton Is The Best!!",
