@@ -9,8 +9,8 @@
     <div id="content">
         <h1>Here's all your news!</h1>
         {% for item in articles %}
-            <h2>{{ item.title|safe }}</h2>
-            {{ item.content|safe }}
+            <h2>{{ item.title }}</h2>
+            {{ item.content }}
         {% endfor %}
     </div>
     <form action="/new_post" method="post">
